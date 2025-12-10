@@ -1,0 +1,43 @@
+@use "../../base/variables" as V;
+
+.content {
+  &__impact,
+  &__mission {
+    padding-bottom: 2%;
+
+    .title {
+      padding: 3% 0 0 3%;
+
+      h2 {
+        font-size: 4vw;
+        padding-bottom: 1%;
+      }
+
+      p {
+        font-size: 1.5vw;
+        padding-bottom: 1%;
+      }
+    }
+    .cards {
+      @include V.flex-center;
+      align-items: stretch;
+      gap: 2%;
+      padding: 2% 3%;
+    }
+  }
+
+  &__mission {
+    background-color: V.$color-btn;
+    .title {
+      color: #fff;
+    }
+  }
+  &__impact {
+    .cards {
+      @include V.flex-between;
+      align-items: stretch;
+      // gap: 4%;
+      padding: 2% 3%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../../base/variables" as v;
+
+.btn_default {
+  @include v.btn-default;
+}
+.btn_outline {
+  @include v.btn-outline;
+}

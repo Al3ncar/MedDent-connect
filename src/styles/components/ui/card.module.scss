@@ -1,0 +1,52 @@
+@use "../../base/variables" as V;
+.outline,
+.default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 1vw;
+
+  p {
+    margin-top: 6%;
+  }
+}
+
+.outline {
+  width: 22%;
+  padding: 5% 2%;
+  border: solid 0.1vw #000;
+
+  h3 {
+    color: V.$color-btn;
+    font-size: 3.5vw;
+  }
+  p {
+    width: 100%;
+    font-size: 1.2vw;
+  }
+}
+
+.default {
+  width: 33%;
+  padding: 3% 2%;
+  color: #fff;
+  border: solid 0.1vw white;
+
+  h3 {
+    font-size: 1.6vw;
+  }
+  p {
+    width: 86.6%;
+    font-size: 1.5vw;
+  }
+
+  &:nth-child(2),
+  &:last-child {
+    p {
+      width: 75%;
+      font-size: 1.2vw;
+    }
+  }
+}
