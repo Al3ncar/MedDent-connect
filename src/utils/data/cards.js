@@ -34,3 +34,18 @@ export const dataImpact = [
     description: "Anos de Dedicação",
   },
 ];
+
+export const dataVolunteer = [
+  {
+    title:"Impacto Direto",
+    description:"Sua dedicação salva vidas e transforma comunidades"
+  },
+  {
+    title:"Crescimento Pessoal",
+    description:"Desenvolva habilidades e cresça profissionalmente"
+  },
+  {
+    title:"Comunidade",
+    description:"Faça parte de uma rede de profissionais comprometidos"
+  },
+]
