@@ -9,10 +9,11 @@
     width: 58%;
     padding-left: 2.5%;
 
-    h2 {
+    h1 {
       width: 60%;
       font-size: 4vw;
       padding: 0 0 2% 0;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     &__badge {
       @include v.flex-between;
@@ -60,7 +61,7 @@
     &__content {
       padding-left: 4%;
 
-      h2 {
+      h1 {
         width: 78%;
         font-size: 5vw;
       }
@@ -91,7 +92,7 @@
     &__content {
       padding-left: 4%;
 
-      h2 {
+      h1 {
         width: 90%;
         font-size: 6vw;
       }
@@ -124,14 +125,14 @@
       width: 35%;
     }
   }
-  @media (max-width: 824px) {
+  @media (max-width: 550px) {
     &__content {
       @include v.flex-center;
       width: 100%;
       padding: 2%;
       flex-direction: column;
 
-      h2 {
+      h1 {
         width: 100%;
         padding: 0 4% 2% 4%;
         font-size: 9vw;
@@ -184,7 +185,7 @@
       padding: 2%;
       flex-direction: column;
 
-      h2 {
+      h1 {
         padding: 0 1% 2% 1%;
         font-size: 11vw;
       }

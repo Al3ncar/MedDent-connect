@@ -14,7 +14,7 @@ export const Health = () => {
           <img src={IconEst} alt={AltEst} />
           <p>Saúde para todos</p>
         </span>
-        <h2>Saúde e cuidado sem barreiras</h2>
+        <h1>Saúde e cuidado sem barreiras</h1>
         <p className={S.health__content__description}>
           Um projeto dedicado a oferecer atendimento médico e odontológico
           gratuito para pessoas que mais precisam na nossa comunidade.
