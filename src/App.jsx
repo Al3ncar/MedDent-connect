@@ -10,12 +10,10 @@ const AppRoutes = () => {
   return (
     <>
       <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/seja-voluntario" element={<BeAVolunteer />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/seja-voluntario" element={<BeAVolunteer />}></Route>
+      </Routes>
       <Footer />
     </>
   );
