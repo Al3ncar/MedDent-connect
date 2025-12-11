@@ -5,6 +5,7 @@ import ILogo from "../../../assets/imgs/logo/logo-med-dent.png";
 import IBurger from "../../../assets/imgs/icons/menu-burger.png";
 import S from "../../../styles/components/header.module.scss";
 import { useState } from "react";
+import { TitleNav } from "../../ui/title-nav/title";
 
 const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
@@ -13,15 +14,8 @@ const Header = () => {
 
   return (
     <header>
-      <Link to="/">
-        <div className={S.title_page}>
-          <img
-            src={ILogo}
-            alt="Logo de um coração branco, com um fundo verde quadrado"
-          />
-          <h1>Médicos & Dentista</h1>
-        </div>
-      </Link>
+
+      <TitleNav color="black" />
 
       <button className={S.burger_btn} onClick={() => handleOpenMenuBurger()}>
         <img
