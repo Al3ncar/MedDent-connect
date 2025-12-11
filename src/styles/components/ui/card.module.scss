@@ -1,4 +1,5 @@
 @use "../../base/variables" as V;
+
 .outline,
 .default {
   display: flex;
@@ -38,15 +39,171 @@
     font-size: 1.6vw;
   }
   p {
-    width: 86.6%;
-    font-size: 1.5vw;
+    width: 68%;
+    font-size: 1.1vw;
   }
 
   &:nth-child(2),
   &:last-child {
     p {
-      width: 75%;
-      font-size: 1.2vw;
+      width: 73%;
+      font-size: 1.1vw;
     }
+  }
+}
+
+@media (max-width: 1224px) {
+  .outline,
+  .default {
+    p {
+      font-size: 1.4vw;
+    }
+  }
+
+  .default {
+    h3 {
+      font-size: 2vw;
+    }
+    p {
+      width: 90%;
+      font-size: 1.4vw;
+    }
+    padding: 4% 2%;
+    &:nth-child(2),
+    &:last-child {
+      p {
+        width: 100%;
+        font-size: 1.4vw;
+      }
+    }
+  }
+  .outline {
+    h3 {
+      font-size: 3vw;
+    }
+
+    padding: 4% 2%;
+  }
+}
+@media (max-width: 824px) {
+  .outline,
+  .default {
+    p {
+      font-size: 1.8vw;
+    }
+  }
+
+  .default {
+    h3 {
+      font-size: 2.5vw;
+    }
+
+    p {
+      width: 100%;
+    }
+    padding: 4% 2%;
+    &:nth-child(2),
+    &:last-child {
+      p {
+        width: 100%;
+        font-size: 1.8vw;
+      }
+    }
+  }
+  .outline {
+    h3 {
+      font-size: 4vw;
+    }
+
+    padding: 4% 2%;
+  }
+}
+@media (max-width: 550px) {
+  .outline,
+  .default {
+    p {
+      font-size: 1.8vw;
+    }
+  }
+
+  .default {
+    width: 70%;
+    margin: 5% 0;
+    h3 {
+      font-size: 4vw;
+    }
+
+    p {
+      width: 92%;
+      font-size: 3.4vw;
+    }
+    padding: 7% 2%;
+    &:nth-child(2),
+    &:last-child {
+      p {
+        width: 88%;
+        font-size: 3vw;
+      }
+    }
+  }
+  .outline {
+    width: 60%;
+    margin: 5% 0;
+
+    h3 {
+      font-size: 9.6vw;
+    }
+
+    p {
+      width: 100%;
+      font-size: 3.5vw;
+    }
+
+    padding: 15% 2%;
+  }
+}
+@media (max-width: 167px) {
+  .outline,
+  .default {
+    p {
+      font-size: 3vw;
+    }
+  }
+
+  .default {
+    width: 90%;
+    margin: 5% 0;
+    h3 {
+      font-size: 7vw;
+    }
+
+    p {
+      width: 98%;
+      font-size: 6vw;
+    }
+    padding: 7% 2%;
+    &:nth-child(2),
+    &:last-child {
+      p {
+        width: 98%;
+        font-size: 6vw;
+      }
+    }
+  }
+  .outline {
+    width: 85%;
+    margin: 5% 0;
+    border-radius: 3vw;
+
+    h3 {
+      font-size: 12vw;
+    }
+
+    p {
+      width: 100%;
+      font-size: 6vw;
+    }
+
+    padding: 15% 2%;
   }
 }

@@ -36,8 +36,85 @@
     .cards {
       @include V.flex-between;
       align-items: stretch;
-      // gap: 4%;
       padding: 2% 3%;
+    }
+  }
+
+  @media (max-width: 1224px) {
+    &__impact,
+    &__mission {
+      .title {
+        h2 {
+          font-size: 4.5vw;
+        }
+
+        p {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+  @media (max-width: 824px) {
+    &__impact,
+    &__mission {
+      .title {
+        h2 {
+          font-size: 5vw;
+        }
+
+        p {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    &__impact,
+    &__mission {
+      text-align: center;
+      .title {
+        @include V.flex-center;
+        flex-direction: column;
+        padding: 5% 2%;
+        
+        h2 {
+          margin-top: 5%;
+          font-size: 8vw;
+        }
+        
+        p {
+          width: 90%;
+          font-size: 4vw;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+      }
+    }
+  }
+  @media (max-width: 167px) {
+    &__impact,
+    &__mission {
+      text-align: center;
+      .title {
+        padding: 5% 2%;
+
+        h2 {
+          font-size: 12vw;
+        }
+
+        p {
+          font-size: 5.5vw;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
