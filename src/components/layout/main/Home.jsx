@@ -1,12 +1,11 @@
 import React from "react";
-import { Button } from "../../ui/button/button";
-import { Health } from "./layout/home/health";
+import { Health } from "./layout/health";
 import { ContentSection } from "../../ui/content/content";
 import { dataImpact, dataMission } from "../../../utils/data/cards";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Health />
       <ContentSection
         type="mission"
@@ -22,7 +21,7 @@ const Home = () => {
         content="Transformando a saúde de nossa comunidade, um paciente de cada vez"
         dataContent={dataImpact}
       />
-    </>
+    </main>
   );
 };
 
