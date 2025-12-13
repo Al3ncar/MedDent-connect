@@ -1,20 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/button/button";
-
-import ILogo from "../../../assets/imgs/logo/logo-med-dent.png";
-import IBurger from "../../../assets/imgs/icons/menu-burger.png";
-import S from "../../../styles/components/header.module.scss";
-import { useState } from "react";
 import { TitleNav } from "../../ui/title-nav/title";
+import { MenuBurger } from "../../ui/menu-burger/menu-burger";
+
+import S from "../../../styles/components/header.module.scss";
+import IBurger from "../../../assets/imgs/icons/menu-burger.png";
 
 const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
-
   const handleOpenMenuBurger = () => setOpenMenu(!isOpenMenu);
+
+  const handleCloseMenuBurger = (id, e) => {
+    const { id: idTarget } = e.target;
+    if (idTarget === id) setOpenMenu(false);
+  };
 
   return (
     <header>
-
       <TitleNav color="black" />
 
       <button className={S.burger_btn} onClick={() => handleOpenMenuBurger()}>
@@ -36,6 +39,10 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      {isOpenMenu && (
+        <MenuBurger onClose={(id, e) => handleCloseMenuBurger(id, e)} />
+      )}
     </header>
   );
 };
