@@ -1,15 +1,18 @@
 @use "../../base/variables" as V;
+a {
+  text-decoration: none;
 
-.title_page {
-  @include V.flex-around;
+  .title_page {
+    @include V.flex-around;
 
-  img {
-    width: 15%;
-  }
-  h2 {
-    padding-left: 2%;
-    font-size: 1vw;
-    text-wrap: nowrap;
+    img {
+      width: 15%;
+    }
+    h2 {
+      padding-left: 2%;
+      font-size: 1vw;
+      text-wrap: nowrap;
+    }
   }
 }
 
@@ -40,7 +43,7 @@
     }
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 592px) {
   a {
     width: 50%;
     margin-left: 3%;
@@ -52,7 +55,7 @@
       h2 {
         width: 90%;
         padding-left: 4%;
-        font-size: 4vw;
+        font-size: 3vw;
       }
     }
   }
