@@ -1,0 +1,78 @@
+@use "../../base/variables" as V;
+
+.form_volunteer {
+  @include V.flex-center;
+  background-color: V.$color-btn;
+  padding: 4% 0 7% 0;
+
+  form {
+    width: 80%;
+    background-color: #fff;
+    padding: 2% 1.5%;
+    border-radius: 1vw;
+    border: solid 1px black;
+
+    h2 {
+      padding-bottom: 1%;
+    }
+
+    .form_volunteer__person {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      h3 {
+        width: 100%;
+
+        padding: 2% 0 1% 0;
+      }
+      input {
+        padding: 1% 0 1% 1.5%;
+        border-radius: 0.5vw;
+        border: solid 0.1vw black;
+        background-color: V.$background-volunteer;
+        &:nth-child(2) {
+          width: 49%;
+        }
+        &:nth-child(3) {
+          width: 49%;
+        }
+        &:nth-child(4) {
+          width: 100%;
+          margin-top: 0.8%;
+        }
+      }
+    }
+
+    .form_volunteer__msg {
+      h3 {
+        padding: 3% 0 1% 0;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 23vh;
+        height: 100%;
+        padding: 1% 0 1% 1.5%;
+        border-radius: 0.5vw;
+        border: solid 0.1vw black;
+        background-color: V.$background-volunteer;
+      }
+    }
+
+    .form_volunteer__submit {
+      @include V.flex-center;
+      flex-direction: column;
+
+      p {
+        padding: 2% 0 3% 0;
+      }
+
+      input {
+        @include V.btn-default;
+        padding: 1% 2%;
+      }
+    }
+  }
+}
