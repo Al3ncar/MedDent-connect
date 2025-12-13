@@ -1,10 +1,10 @@
-import S from "../../../../../styles/components/layout/health.module.scss";
+import S from "../../../../styles/components/layout/health.module.scss";
 
-import Doctor from "../../../../../assets/imgs/volunter/doctor.png";
-import IconEst from "../../../../../assets/imgs/icons/icon-med.png";
+import Doctor from "../../../../assets/imgs/volunter/doctor.png";
+import IconEst from "../../../../assets/imgs/icons/icon-med.png";
 
-import { altDoctor, AltEst } from "../../../../../utils/altPictures";
-import { Button } from "../../../../ui/button/button";
+import { altDoctor, AltEst } from "../../../../utils/altPictures";
+import { Button } from "../../../ui/button/button";
 
 export const Health = () => {
   return (
