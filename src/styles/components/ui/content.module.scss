@@ -1,6 +1,7 @@
 @use "../../base/variables" as V;
 
 .content {
+  &__volunteer,
   &__impact,
   &__mission {
     padding-bottom: 2%;
@@ -33,11 +34,18 @@
     }
   }
   &__impact {
+    padding: 2% 0 5% 0;
     .cards {
       @include V.flex-between;
       align-items: stretch;
       padding: 2% 3%;
     }
+  }
+
+  &__volunteer {
+    text-align: center;
+    color: black;
+    background-color: V.$background-volunteer;
   }
 
   @media (max-width: 1224px) {
@@ -68,7 +76,7 @@
       }
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 592px) {
     &__impact,
     &__mission {
       text-align: center;
@@ -76,12 +84,12 @@
         @include V.flex-center;
         flex-direction: column;
         padding: 5% 2%;
-        
+
         h2 {
           margin-top: 5%;
           font-size: 8vw;
         }
-        
+
         p {
           width: 90%;
           font-size: 4vw;

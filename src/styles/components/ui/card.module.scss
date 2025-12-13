@@ -1,16 +1,24 @@
 @use "../../base/variables" as V;
 
 .outline,
-.default {
+.default,
+.solid {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
   border-radius: 1vw;
+  transition: all 0.2s;
 
   p {
     margin-top: 6%;
+  }
+
+  &:hover {
+    transition: all 0.2s;
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
@@ -49,6 +57,20 @@
       width: 73%;
       font-size: 1.1vw;
     }
+  }
+}
+
+.solid {
+  width: 33%;
+  padding: 2%;
+  border: solid 0.1vw #000;
+  background-color: #fff;
+  h3 {
+    font-size: 2vw;
+  }
+  p {
+    width: 80%;
+    font-size: 1.2vw;
   }
 }
 
@@ -118,7 +140,7 @@
     padding: 4% 2%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 592px) {
   .outline,
   .default {
     p {
