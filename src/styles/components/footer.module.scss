@@ -1,0 +1,272 @@
+@use "../base/variables" as V;
+
+footer {
+  @include V.flex-center;
+  flex-direction: column;
+  color: #fff;
+  background-color: V.$background-footer;
+
+  .nav_footer {
+    width: 100%;
+    gap: 4%;
+    padding: 3% 0;
+    display: flex;
+    align-items: center;
+
+    &__title {
+      width: 26%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 12%;
+
+      a {
+        div {
+          width: 75%;
+          img {
+            width: 70%;
+          }
+          h2 {
+            margin-left: 5%;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.1vw;
+        width: 80%;
+        margin-top: 5%;
+      }
+    }
+
+    &__contact {
+      width: 18%;
+      margin-right: 5%;
+
+      h3 {
+        font-size: 1.1vw;
+        margin-top: 6%;
+        margin-bottom: 5%;
+      }
+
+      li {
+        @include V.flex-between;
+        justify-content: start;
+        margin: 6% 0;
+        gap: 2%;
+        text-wrap: nowrap;
+      }
+    }
+
+    &__social {
+      h3 {
+        font-size: 1.2vw;
+        margin-bottom: 7%;
+      }
+      li {
+        @include V.flex-between;
+        justify-content: start;
+        margin: 6% 0;
+        gap: 2%;
+      }
+    }
+  }
+
+  .nav_copyright {
+    width: 80%;
+    text-align: center;
+    padding: 1.5% 0 2% 0;
+    border-top: solid 1px #000;
+  }
+  @media (max-width: 1224px) {
+    .nav_footer {
+      &__title {
+        width: 30%;
+        margin-left: 5%;
+
+        p {
+          width: 100%;
+          font-size: 1.5vw;
+        }
+      }
+
+      &__contact,
+      &__social {
+        width: 30%;
+        h3 {
+          font-size: 1.7vw;
+        }
+
+        li {
+          font-size: 1.5vw;
+        }
+      }
+    }
+  }
+  @media (max-width: 824px) {
+    .nav_footer {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      &__title {
+        width: 30%;
+        margin-left: 2%;
+
+        p {
+          width: 100%;
+          font-size: 1.8vw;
+        }
+      }
+
+      &__contact,
+      &__social {
+        width: 30%;
+        h3 {
+          font-size: 2vw;
+        }
+
+        li {
+          font-size: 1.7vw;
+        }
+      }
+    }
+  }
+  @media (max-width: 592px) {
+    .nav_footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      &__title {
+        width: 45%;
+        margin-left: 2%;
+
+        p {
+          margin: 12% 8% 5% 9%;
+          width: 100%;
+          font-size: 2.5vw;
+        }
+      }
+
+      &__contact {
+        width: 38%;
+        margin-top: 6%;
+        margin-left: 4%;
+
+        h3 {
+          font-size: 3vw;
+        }
+
+        li {
+          font-size: 2.6vw;
+        }
+      }
+
+      &__social {
+        width: 30%;
+        margin-left: 7%;
+        h3 {
+          font-size: 3vw;
+        }
+
+        li {
+          font-size: 3vw;
+        }
+      }
+    }
+    .nav_copyright {
+      width: 100%;
+      font-size: 2.5vw;
+      text-align: center;
+      padding: 7% 0;
+    }
+  }
+  @media (max-width: 167px) {
+    .nav_footer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 92%;
+      padding-top: 11%;
+
+      &__title {
+        width: 100%;
+        a {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          div {
+            width: 100%;
+            img {
+              width: 12%;
+              //   margin-left: 7%;
+            }
+            h2 {
+              margin-left: 4%;
+              font-size: 7vw;
+            }
+          }
+        }
+
+        p {
+          margin: 7% 0;
+          padding: 0;
+          width: 95%;
+          font-size: 6vw;
+          text-align: center;
+        }
+      }
+
+      &__contact {
+        text-align: center;
+        width: 100%;
+        margin-top: 6%;
+        margin-left: 0%;
+
+        h3 {
+          font-size: 8vw;
+        }
+
+        li {
+          flex-direction: column;
+          margin-top: 13%;
+          font-size: 6vw;
+
+          p {
+            margin-top: 6%;
+          }
+        }
+      }
+
+      &__social {
+        text-align: center;
+
+        width: 100%;
+        margin-top: 9%;
+        margin-left: 0%;
+        h3 {
+          font-size: 8vw;
+        }
+
+        li {
+          font-size: 7vw;
+
+          p {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .nav_copyright {
+      width: 100%;
+      font-size: 6vw;
+ 
+      padding: 7% 0;
+    }
+  }
+}
