@@ -1,103 +1,49 @@
-@use "../base/variables" as v;
+@use "../base/variables" as V;
 
 header {
-  @include v.flex-between;
-  padding: 0.5%;
-  border-bottom: solid 0.1vw #636161;
-  position: relative;
+  section {
+    @include V.flex-between;
+    padding: 0.5%;
+    border-bottom: solid 0.1vw #636161;
 
-  a {
-    text-decoration: none;
-    color: #000;
-    margin-left: 4%;
-  }
-
-  .burger_btn {
-    background: transparent;
-    border: none;
-    display: none;
-    cursor: pointer;
-  }
-
-  nav {
-    width: 20%;
-    padding-right: 0.5%;
-    ul {
-      @include v.flex-between;
-      width: 100%;
-      li {
-        list-style: none;
-        a {
-          text-decoration: none;
-        }
-
-        &:first-child {
-          width: 40%;
-          text-align: end;
-          font-weight: 600;
-          margin-right: 8%;
-          font-size: 1.1vw;
-        }
-        &:last-child {
-          width: 50%;
-
-          a {
-            button {
-              text-wrap: nowrap;
-              padding: 8% 13%;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 1224px) {
-    nav {
-      margin-right: 3%;
-      ul {
-        li {
-          &:first-child {
-            width: 45%;
-            font-size: 1.3vw;
-          }
-          &:last-child {
-            width: 50%;
-
-            a {
-              button {
-                font-size: 1.3vw;
-                text-wrap: nowrap;
-                padding: 12% 13%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 824px) {
-    width: 100%;
-    padding: 1%;
     a {
-      width: 30%;
+      text-decoration: none;
+      color: #000;
+      margin-left: 4%;
+    }
+
+    .burger_btn__animating,
+    .burger_btn {
+      background: transparent;
+      border: none;
+      display: none;
+      cursor: pointer;
     }
 
     nav {
-      width: 36%;
-      margin-right: 3%;
+      width: 20%;
+      padding-right: 0.5%;
       ul {
+        @include V.flex-between;
+        width: 100%;
         li {
+          list-style: none;
+          a {
+            text-decoration: none;
+          }
+
           &:first-child {
-            width: 45%;
-            font-size: 2vw;
+            width: 40%;
+            text-align: end;
+            font-weight: 600;
+            margin-right: 8%;
+            font-size: 1.1vw;
           }
           &:last-child {
             width: 50%;
 
             a {
               button {
-                font-size: 2vw;
                 text-wrap: nowrap;
                 padding: 8% 13%;
               }
@@ -107,36 +53,223 @@ header {
       }
     }
   }
-  @media (max-width: 592px) {
-    width: 100%;
-    padding: 3% 0%;
-    a {
-      width: 50%;
-      margin-left: 3%;
-    }
 
-    .burger_btn {
-      display: flex;
-      margin-right: 3%;
-    }
-    nav {
-      display: none;
+  @media (max-width: 1224px) {
+    section {
+      nav {
+        margin-right: 3%;
+        ul {
+          li {
+            &:first-child {
+              width: 45%;
+              font-size: 1.3vw;
+            }
+            &:last-child {
+              width: 50%;
+
+              a {
+                button {
+                  font-size: 1.3vw;
+                  text-wrap: nowrap;
+                  padding: 12% 13%;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
-  @media (max-width: 167px) {
-    width: 100%;
-    padding: 3% 0%;
-    a {
-      width: 80%;
-      margin-left: 3%;
+  @media (max-width: 824px) {
+    section {
+      width: 100%;
+      padding: 1%;
+      a {
+        width: 30%;
+      }
+
+      nav {
+        width: 36%;
+        margin-right: 3%;
+        ul {
+          li {
+            &:first-child {
+              width: 45%;
+              font-size: 2vw;
+            }
+            &:last-child {
+              width: 50%;
+
+              a {
+                button {
+                  font-size: 2vw;
+                  text-wrap: nowrap;
+                  padding: 8% 13%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 592px) {
+    section {
+      width: 100%;
+      padding: 3% 0%;
+      flex-wrap: wrap;
+      border: none;
+
+      a {
+        width: 80%;
+        margin-left: 3%;
+        padding-right: 5%;
+      }
+
+      .burger_btn {
+        display: flex;
+        margin-right: 3%;
+        transition: all 0.2s;
+
+        &__animating {
+          display: flex;
+          margin-right: 3%;
+          display: flex;
+          transform: rotate(90deg);
+          transition: all 0.2s;
+        }
+      }
+
+      nav {
+        display: none;
+      }
     }
 
-    .burger_btn {
+    .menu_burger {
+      width: 100%;
       display: flex;
-      margin-right: 3%;
+      align-items: center;
+      animation: open-menu 0.2s ease-in-out forwards;
+      transition: all 2s;
+      margin: 0;
+
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          width: 50%;
+          list-style: none;
+          text-align: center;
+          transition: all 0.5s;
+          display: flex;
+          align-items: center;
+
+          a {
+            width: 100%;
+            margin: 0;
+            padding: 5% 0;
+            font-size: 3vw;
+            text-align: center;
+            font-size: 3vw;
+            color: #000;
+          }
+
+          .Click {
+            width: 100%;
+            color: V.$color-btn;
+            font-weight: 900;
+            border-bottom: solid 0.9vw V.$color-btn;
+          }
+
+          &:first-child {
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            .Click {
+              color: V.$color-btn;
+              font-weight: bolder;
+              border-bottom: solid 0.9vw V.$color-btn;
+            }
+          }
+        }
+      }
     }
-    nav {
-      display: none;
+  }
+  @media (max-width: 320px) {
+    section {
+      width: 100%;
+      padding: 3% 0%;
+
+      a {
+        width: 50%;
+        margin-left: 3%;
+      }
+      .burger_btn__animating,
+      .burger_btn {
+        display: flex;
+        padding: 2%;
+
+        img {
+          width: 80%;
+        }
+      }
     }
+
+    .menu_burger {
+      animation: open-menu-watch 0.2s ease-in-out forwards;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          width: 100%;
+
+          .Click {
+            border: none;
+          }
+
+          &:first-child {
+            width: 100%;
+            font-size: 6vw;
+            .Click {
+              border: none;
+            }
+          }
+
+          a {
+            width: 100%;
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    height: 0vh;
+    opacity: 0;
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes open-menu-watch {
+  0% {
+    height: 0vh;
+    opacity: 0;
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
   }
 }
