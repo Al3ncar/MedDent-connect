@@ -1,4 +1,3 @@
-import React from "react";
 import { ContentSection } from "../../ui/content/content";
 import { dataVolunteer } from "../../../utils/data/cards";
 import { FormVolunteer } from "./layout/form-volunteer";
