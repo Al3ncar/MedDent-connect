@@ -183,7 +183,7 @@ footer {
       padding: 7% 0;
     }
   }
-  @media (max-width: 167px) {
+  @media (max-width: 320px) {
     .nav_footer {
       display: flex;
       align-items: center;
@@ -195,19 +195,18 @@ footer {
       &__title {
         width: 100%;
         a {
-          width: 100%;
+          width: 95%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           div {
             width: 100%;
             img {
               width: 12%;
-              //   margin-left: 7%;
             }
             h2 {
-              margin-left: 4%;
-              font-size: 7vw;
+              width: 100%;
+              font-size: 6vw;
             }
           }
         }
@@ -265,7 +264,7 @@ footer {
     .nav_copyright {
       width: 100%;
       font-size: 6vw;
- 
+
       padding: 7% 0;
     }
   }
