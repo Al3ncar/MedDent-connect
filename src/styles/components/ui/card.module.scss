@@ -76,12 +76,12 @@
 
 @media (max-width: 1224px) {
   .outline,
+  .solid,
   .default {
     p {
       font-size: 1.4vw;
     }
   }
-
   .default {
     h3 {
       font-size: 2vw;
@@ -109,6 +109,7 @@
 }
 @media (max-width: 824px) {
   .outline,
+  .solid,
   .default {
     p {
       font-size: 1.8vw;
@@ -148,6 +149,7 @@
     }
   }
 
+  .solid,
   .default {
     width: 70%;
     margin: 5% 0;
@@ -183,9 +185,17 @@
 
     padding: 15% 2%;
   }
+
+  .solid {
+    width: 80%;
+    margin: 3% 0;
+    padding: 4% 6%;
+    border-radius: 2vw;
+  }
 }
 @media (max-width: 167px) {
   .outline,
+  .solid,
   .default {
     p {
       font-size: 3vw;
@@ -227,5 +237,27 @@
     }
 
     padding: 15% 2%;
+  }
+
+  .solid {
+    width: 95%;
+    padding: 4% 2%;
+
+    h3 {
+      font-size: 7vw;
+    }
+
+    p {
+      width: 100%;
+      font-size: 6vw;
+    }
+
+    &:nth-child(2),
+    &:last-child {
+      p {
+        width: 98%;
+        font-size: 6vw;
+      }
+    }
   }
 }
