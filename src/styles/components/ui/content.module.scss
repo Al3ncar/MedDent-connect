@@ -50,6 +50,7 @@
 
   @media (max-width: 1224px) {
     &__impact,
+    &__volunteer,
     &__mission {
       .title {
         h2 {
@@ -64,6 +65,7 @@
   }
   @media (max-width: 824px) {
     &__impact,
+    &__volunteer,
     &__mission {
       .title {
         h2 {
@@ -78,6 +80,7 @@
   }
   @media (max-width: 592px) {
     &__impact,
+    &__volunteer,
     &__mission {
       text-align: center;
       .title {
@@ -102,9 +105,19 @@
         margin-bottom: 5%;
       }
     }
+
+    &__volunteer {
+      .title {
+        p {
+          margin-top: 5%;
+          font-size: 3.5vw;
+        }
+      }
+    }
   }
   @media (max-width: 167px) {
     &__impact,
+    &__volunteer,
     &__mission {
       text-align: center;
       .title {
