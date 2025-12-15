@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ICheck from "../../../../assets/imgs/icons/check.png";
 import S from "../../../../styles/components/layout/form-volunteer.module.scss";
 
 export const FormVolunteer = () => {
   const [validInput, setValidInput] = useState(false);
-  const [sandData, setSandData] = useState(true);
+  const [sandData, setSandData] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [formData, setFormData] = useState([
     {
       nome: "",
@@ -35,23 +36,34 @@ export const FormVolunteer = () => {
     e.preventDefault();
     setValidInput(true);
 
-    validEmptyInput() && setSandData(true);
+    validEmptyInput() && hasLoading();
   };
 
-  useEffect(() => {
-    console.log(formData);
-  }, formData);
+  const hasLoading = () => {
+    setSandData(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
 
   return (
     <section className={S.form_volunteer}>
       {sandData ? (
         <div className={S.check_content}>
-          <img src={ICheck} alt="" />
-
-          <p>
-            Cadastro realizado com sucesso. Entraremos em contato para mais
-            informações.
-          </p>
+          {isLoading ? (
+            <div className={S.loading}>
+              <div className={S.loading_spinner} />
+            </div>
+          ) : (
+            <>
+              <img src={ICheck} alt="" />
+              <p>
+                Cadastro realizado com sucesso. Entraremos em contato para mais
+                informações.
+              </p>
+            </>
+          )}
         </div>
       ) : (
         <form action="/" method="POST" onSubmit={(e) => sandFormData(e)}>
