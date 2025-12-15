@@ -14,7 +14,9 @@
       font-size: 4vw;
       padding: 0 0 2% 0;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      animation: slideLeft ease-in-out forwards 1s;
     }
+
     &__badge {
       @include v.flex-between;
       width: 32%;
@@ -22,6 +24,9 @@
       margin: 9% 0 3% 0;
       border-radius: 1.5vw;
       background-color: v.$background-badge;
+      cursor: pointer;
+      transition: all 0.2s;
+
       img {
         width: 15%;
       }
@@ -31,11 +36,17 @@
         font-size: 1.5vw;
         padding-left: 6%;
       }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.2s;
+      }
     }
     &__description {
       width: 57%;
       font-size: 1.5vw;
       margin-bottom: 6%;
+      animation: slideLeft ease-in-out forwards 2s;
     }
 
     &__btns {
@@ -44,6 +55,19 @@
       margin-bottom: 14%;
       button {
         width: 46%;
+
+        animation: slideFloot linear infinite 2s;
+
+        &:first-child {
+          animation: slideFloot linear infinite 2s;
+        }
+        &:last-child {
+          animation: slideFlootReverse linear infinite 2s;
+        }
+
+        &:hover {
+          animation-play-state: paused;
+        }
       }
     }
   }
@@ -51,9 +75,14 @@
   &__picture {
     margin-right: 1.5%;
     width: 35%;
+    animation: slideZoom ease-in-out forwards 2s;
 
     img {
       width: 100%;
+    }
+
+    &:hover {
+      animation: slideZoom;
     }
   }
 
@@ -137,6 +166,7 @@
         padding: 0 4% 2% 4%;
         font-size: 9vw;
         text-align: center;
+        animation: slideLeftMobile ease-in-out forwards 2s;
       }
 
       &__badge {
@@ -158,6 +188,8 @@
         margin-top: 3%;
         text-align: center;
         font-size: 4vw;
+
+        animation: slideLeftMobile ease-in-out forwards 2s;
       }
 
       &__btns {
@@ -168,8 +200,10 @@
           width: 100%;
           font-size: 3vw;
           border-radius: 2vw;
+          animation: slideFlootMobile linear infinite 2s;
           &:last-child {
             margin-top: 3%;
+            animation: slideFlootMobile linear infinite 2s;
           }
         }
       }
@@ -226,5 +260,80 @@
     &__picture {
       display: none;
     }
+  }
+}
+
+@keyframes slideFloot {
+  0% {
+    transform: translateY(2vh);
+  }
+
+  50% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(2vh);
+  }
+}
+@keyframes slideFlootMobile {
+  0% {
+    transform: translateY(20px);
+  }
+
+  50% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes slideFlootReverse {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  50% {
+    transform: translateY(2vh);
+  }
+
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes slideZoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideLeftMobile {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }

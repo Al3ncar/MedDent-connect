@@ -19,6 +19,7 @@
     transition: all 0.2s;
     transform: scale(1.05);
     cursor: pointer;
+    box-shadow: 0 0 5vw 0 #fff;
   }
 }
 
@@ -34,6 +35,10 @@
   p {
     width: 100%;
     font-size: 1.2vw;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5vw 0 V.$color-btn;
   }
 }
 
@@ -71,6 +76,10 @@
   p {
     width: 80%;
     font-size: 1.2vw;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5vw 0 black;
   }
 }
 

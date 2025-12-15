@@ -55,6 +55,14 @@ footer {
         margin: 6% 0;
         gap: 2%;
         text-wrap: nowrap;
+        transition: all 0.2s;
+
+        &:hover {
+          color: V.$color-btn;
+          cursor: pointer;
+          transform: scale(1.03);
+          transition: all 0.2s;
+        }
       }
     }
 
@@ -66,8 +74,17 @@ footer {
       li {
         @include V.flex-between;
         justify-content: start;
+        transition: all 0.2s;
+
         margin: 6% 0;
         gap: 2%;
+
+        &:hover {
+          color: V.$color-btn;
+          cursor: pointer;
+          transform: scale(1.03);
+          transition: all 0.2s;
+        }
       }
     }
   }
