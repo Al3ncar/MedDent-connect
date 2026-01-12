@@ -1,16 +1,65 @@
-# React + Vite
+# Saúde para Todos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Home Page](./src/assets/imgs/volunter/home.png)
 
-Currently, two official plugins are available:
+> **Saúde e cuidado sem barreiras** > Um projeto dedicado a oferecer atendimento médico e odontológico gratuito para pessoas que mais precisam na nossa comunidade.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🩺 Sobre o Projeto
 
-## React Compiler
+**Saúde para Todos** é uma iniciativa social focada em promover o acesso universal à saúde de qualidade. O projeto conecta profissionais voluntários da área da saúde a pessoas em situação de vulnerabilidade, oferecendo atendimento médico e odontológico gratuito, humano e acessível.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nosso propósito é simples e poderoso: **cuidar de pessoas, sem barreiras financeiras ou sociais**.
 
-## Expanding the ESLint configuration
+## 🎯 Nossa Missão
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Transformar vidas através do acesso universal à saúde de qualidade.**
+
+Trabalhamos diariamente para garantir que o cuidado com a saúde seja um direito real e acessível a todos.
+
+## 🌍 Nossos Pilares
+
+### 🤝 Acesso Equitativo
+
+Garantir que todos tenham acesso a cuidados de saúde de qualidade, independentemente de sua condição financeira.
+
+### 🧑‍⚕️ Comunidade Forte
+
+Construir uma rede de profissionais de saúde dedicados a servir com compaixão, empatia e profissionalismo.
+
+### 💙 Bem-estar Total
+
+Oferecer atendimento integral em medicina geral e odontologia, promovendo mais qualidade de vida e prevenção.
+
+## 🙋‍♂️ Seja Voluntário
+
+Profissionais da saúde podem fazer parte dessa transformação. Se você é médico, dentista ou atua na área da saúde e deseja ajudar, sua contribuição pode mudar vidas.
+
+**Como ajudar:**
+
+- Atendimentos voluntários
+- Apoio em campanhas comunitárias
+- Divulgação do projeto
+
+## 📊 Nosso Impacto
+
+**Transformando a saúde da nossa comunidade, um paciente de cada vez.**
+
+- **2.500+** pessoas atendidas
+- **150+** profissionais voluntários
+- **98%** de satisfação dos pacientes
+- **5+ anos** de dedicação contínua
+
+## 🖼️ Identidade Visual
+
+- Ícone minimalista de um **estetoscópio preto**
+- Fundo **transparente**
+- Linguagem visual simples, humana e acessível
+
+## 📄 Licença
+
+Este projeto é de caráter social e comunitário. Consulte o responsável pelo projeto para mais informações sobre uso, contribuições ou parcerias.
+
+## ❤️ Agradecimentos
+
+A todos os voluntários, parceiros e pacientes que acreditam que **saúde é um direito de todos**.
+Juntos, seguimos cuidando de vidas.
