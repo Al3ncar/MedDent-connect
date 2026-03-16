@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ICheck from "../../../../assets/imgs/icons/check.png";
 import S from "../../../../styles/components/layout/form-volunteer.module.scss";
+import axios from "axios";
 
 export const FormVolunteer = () => {
   const [validInput, setValidInput] = useState(false);
@@ -8,9 +9,9 @@ export const FormVolunteer = () => {
   const [isLoading, setLoading] = useState(true);
   const [formData, setFormData] = useState([
     {
-      nome: "",
+      name: "",
       email: "",
-      tall: "",
+      cellPhone: "",
       msg: "",
     },
   ]);
@@ -24,7 +25,7 @@ export const FormVolunteer = () => {
 
   const validEmptyInput = () => {
     return formData.map((item) => {
-      return item.name === "" && item.email === "" && item.tall === "";
+      return item.name === "" && item.email === "" && item.cellPhone === "";
     });
   };
 
@@ -35,8 +36,16 @@ export const FormVolunteer = () => {
   const sandFormData = (e) => {
     e.preventDefault();
     setValidInput(true);
+    !validEmptyInput()[0] && hasLoading();
+  };
 
-    validEmptyInput() && hasLoading();
+  const sendDataAPI = async () => {
+    try {
+      axios.post("https://meddent-connect-api.onrender.com/api/data", formData[0]);
+    } catch (error) {
+      setValidInput(true);
+      console.error("Não foi possivel enviar as informações para a API", error)
+    }
   };
 
   const hasLoading = () => {
@@ -71,14 +80,14 @@ export const FormVolunteer = () => {
           <div className={S.form_volunteer__person}>
             <h3>Dados Pessoais</h3>
             <input
-              value={formData[0].nome}
+              value={formData[0].name}
               onChange={(e) => changeValueForm(e)}
               type="text"
-              name="nome"
+              name="name"
               pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$"
               title="Por favor, Digite apenas letras e espaços"
-              placeholder="Seu Nome *"
-              style={addBorderErroInInput(formData[0].nome)}
+              placeholder="Seu name *"
+              style={addBorderErroInInput(formData[0].name)}
             />
             <input
               value={formData[0].email}
@@ -91,14 +100,14 @@ export const FormVolunteer = () => {
               style={addBorderErroInInput(formData[0].email)}
             />
             <input
-              value={formData[0].tall}
+              value={formData[0].cellPhone}
               onChange={(e) => changeValueForm(e)}
               type="tel"
-              name="tall"
+              name="cellPhone"
               pattern="^\(?\d{2}\)?\s?9\d{4}-?\d{4}$"
               title="Por favor, Digite um telefone válido (ex: 11987654321 ou (11) 98765-4321)"
               placeholder="Seu Telefone *"
-              style={addBorderErroInInput(formData[0].tall)}
+              style={addBorderErroInInput(formData[0].cellPhone)}
             />
           </div>
           <div className={S.form_volunteer__msg}>
@@ -114,7 +123,11 @@ export const FormVolunteer = () => {
           </div>
           <div className={S.form_volunteer__submit}>
             <p>Entraremos em contato para mais informações</p>
-            <input type="submit" value="Enviar Inscrição" />
+            <input
+              type="submit"
+              value="Enviar Inscrição"
+              onClick={() => sendDataAPI()}
+            />
           </div>
         </form>
       )}
